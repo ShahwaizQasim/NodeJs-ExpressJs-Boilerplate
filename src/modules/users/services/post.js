@@ -1,4 +1,4 @@
-import addData from "../db/index.js";
+import {addData} from "../db/index.js";
 
 const postData = async (data) => {
     return await addData(data);

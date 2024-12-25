@@ -1,10 +1,7 @@
+import { getData } from "../db/index.js";
 
-
-
-
-const getAllData = async (req, res) => {
-    // return getAll();
-    res.send("hello")
+const getAllData = async () => {
+    return await getData();
 }
 
 export default getAllData;
