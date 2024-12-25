@@ -1,6 +1,10 @@
 import { Router } from "express";
 import getController from "./controllers/get.js";
+import postController from "./controllers/post.js";
 
-const router = Router();
+const userRoutes = Router();
 
-router.get('/', getController );
+userRoutes.get('/', getController );
+userRoutes.post('/', postController );
+
+export default userRoutes;
