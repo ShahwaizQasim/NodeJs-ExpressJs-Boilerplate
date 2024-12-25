@@ -3,6 +3,7 @@ import mongoose from "./src/db/dbConnect.js";
 import helmet from "helmet";
 import 'dotenv/config'
 import router from "./src/routes/index.js";
+import chalk from "chalk";
 
 const app = express();
 
@@ -10,7 +11,7 @@ app.use(helmet())
 app.use(express.json());
 
 mongoose.connection.on("open", () => {
-    console.log("MongoDB is connected");
+    console.log(chalk.green.bgWhite("MongoDB is connected")); // error ya message colorful banane ke liye hum chalk library use krte hain
 
 })
 mongoose.connection.on("error", (error) => {
